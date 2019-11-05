@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>	
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="BBQ">
+	<title>招牌美食-联系我们-三味真火酒吧烧烤加盟官网 酒吧文化烧烤领导者 </title>
+	<meta name="keywords" content="三味真火,三味真火酒吧烧烤,三味真火加盟,烧烤加盟">
+	<meta name="description" content="三味真火酒吧烧烤首创海盗主题酒吧烧烤，烧烤加盟请关注三味真火，在这里可以大快朵颐，在这里可以尽情放肆，喝酒吃肉，打劫社交，三味真火酒吧烧烤加盟，要味道还要腔调，三味真火加盟热线：4006099517">
+	<link rel="shortcut icon" type="image/x-icon" href="../static/img/icon/favicon.ico">
+	<link rel="stylesheet" href="../static/css/home.css">
+    <link rel="stylesheet" href="../static/css/icon.css">
+    <link rel="stylesheet" href="../static/css/order_center.css">
+	<!--[if lte IE 8]>
+	<link rel="stylesheet" href="css/iehack.css">
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?05e4a554b37e54a1436450128ce7173c";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+</head>
+<body>
+<!-- Header -->
+<header id="header" class="">
+	<div class="container">
+		<div class="global-nav">
+			<button class="navbar-toggle">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="brand" href="/index">三味真火</a>
+			<nav class="navbar">
+				<ul class="nav">
+					<li class="pc-nav-home">
+						<a href="/index">首页</a>
+					</li>
+					<li class="pc-nav-food">
+						<a href="/food"  class="food-current">招牌美食</a>
+					</li>
+					<li class="pc-nav-char">
+						<a href="/activity">特色活动</a>
+					</li>
+					<li class="pc-nav-join">
+						<a href="/join">招商加盟</a>
+					</li>
+					<li class="pc-nav-ente">
+						<a href="/profile">企业概况</a>
+					</li>
+					<li class="pc-nav-menn">
+						<a href="/about">联系我们</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	
+</header>
+
+<!-- Product -->
+<section id="Taste" class="Talents" style="margin-bottom:0;">
+	
+	<div class="container">
+		<div class="item-title">
+			<a href="/food"><button type="button">&lt;</button>&nbsp;&nbsp;返 回</a>
+			<h1>订单中心</h1>
+		</div>
+		<div class="info">
+			{% csrf_token %}
+			<table class="order_info">
+				<tr><th>订单号</th><th>时间</th><th>姓名</th><th>电话</th><th>订单总价</th><th>地址</th></tr>
+			</table>
+
+		</div>
+
+		<div class="order_detail" style="height: 620px;" hidden>
+			<table class="odet">
+				<tr><th>菜名</th><th>数量</th><th>总价</th></tr>
+			</table>
+		</div>
+	</div>
+</section>
+
+<!-- Footer -->
+<footer id="footer" style="background: black">
+	
+	</footer>
+
+<script src="../static/js/jquery-1.8.3.min.js"></script>
+<script src="../static/js/banner.js"></script>
+<script src="../static/js/navbar.js"></script>
+<script src="../static/js/web.core.js"></script>
+<script src="../static/js/web.adtabs.js"></script>
+<script src="../static/js/web.subnav.js"></script>
+<script src="../static/js/web.ui.js"></script>
+<script src="../static/js/order_center.js"></script>
+</body>
+</html>

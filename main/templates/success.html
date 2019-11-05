@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>	
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="BBQ">
+	<title>招牌美食-联系我们-三味真火酒吧烧烤加盟官网 酒吧文化烧烤领导者 </title>
+	<meta name="keywords" content="三味真火,三味真火酒吧烧烤,三味真火加盟,烧烤加盟">
+	<meta name="description" content="三味真火酒吧烧烤首创海盗主题酒吧烧烤，烧烤加盟请关注三味真火，在这里可以大快朵颐，在这里可以尽情放肆，喝酒吃肉，打劫社交，三味真火酒吧烧烤加盟，要味道还要腔调，三味真火加盟热线：4006099517">
+	<link rel="shortcut icon" type="image/x-icon" href="../static/img/icon/favicon.ico">
+	<link rel="stylesheet" href="../static/css/home.css">
+    <link rel="stylesheet" href="../static/css/icon.css">
+    <link rel="stylesheet" href="../static/css/success.css">
+	<!--[if lte IE 8]>
+	<link rel="stylesheet" href="css/iehack.css">
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?05e4a554b37e54a1436450128ce7173c";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+</head>
+<body>
+<!-- Header -->
+<header id="header" class="">
+	<div class="container">
+		<div class="global-nav">
+			<button class="navbar-toggle">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="brand" href="/index">三味真火</a>
+			<nav class="navbar">
+				<ul class="nav">
+					<li class="pc-nav-home">
+						<a href="/index">首页</a>
+					</li>
+					<li class="pc-nav-food">
+						<a href="/food"  class="food-current">招牌美食</a>
+					</li>
+					<li class="pc-nav-char">
+						<a href="/activity">特色活动</a>
+					</li>
+					<li class="pc-nav-join">
+						<a href="/join">招商加盟</a>
+					</li>
+					<li class="pc-nav-ente">
+						<a href="/profile">企业概况</a>
+					</li>
+					<li class="pc-nav-menn">
+						<a href="/about">联系我们</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	
+</header>
+
+<!-- Product -->
+<section id="Taste" class="Talents" style="margin-bottom:0;">
+	
+	<div class="container">
+		<div class="item-title">
+			<a href="/food"><button type="button">&lt;</button>&nbsp;&nbsp;返回菜单</a>
+			<h1>预 定 成 功</h1>
+			<h3>Successful Booking</h3>
+		</div>
+		<div class="info">
+            <div class="tip">
+                <p>订单详情：</p>
+            </div>
+            <div class="order_info">
+					{% csrf_token %}
+                <div>
+                    <label> 订 单 号：</label><span id="order_id">{{order_id}}</span>
+                </div>
+                <div>
+                   <label> 订 单 时 间：</label><span id="time">{{time}}</span>
+                </div>
+                <div>
+                    <label> 收 货 人：</label><span><input id="customer" type="text" value="{{customer}}"></span>
+                </div>
+                <div>
+                    <label> 手 机 号：</label><span><input id="phone" type="text" value="{{phone}}"></span>
+                </div>
+                <div>
+                    <label>收 货 地 址：</label><span><input id="target_addr" type="text" value="{{target_addr}}"></span>
+				</div>
+				<div>
+                    <label class="remarks_title">备 注：</label><span><textarea id="remarks" type="text" >{{remarks}}</textarea></span>
+                </div>
+                <div>
+					<label> 商 品 列 表：</label>
+					<table>
+						<tr class="good_info_title"><td>商 品 名 称</td><td>数 量</td><td>金 额</td></tr>
+						{% for n, c, p in order_list %}
+							<tr class="good_info"><td class="fname">{{n}}</td><td class="fcnt">{{c}}</td><td class="fpic">{{p}}</td></tr>
+						{% endfor %}
+					</table>
+                    <div class="good_cont">
+                        <span>总件数：</span><span id="sum_cnt">{{sum_cnt}} </span><span>件</span><br>
+                        <span>合&nbsp;&nbsp;计：</span><span id="sum_pic">{{sum_pic}} </span><span>￥</span>
+                    </div>
+				</div>
+            </div>
+		</div>
+		<div class="pay">
+			<button id="pay_btn" type="button">确 认 支 付</button>
+		</div>
+	</div>
+
+	
+</section>
+<script src="../static/js/jquery-1.8.3.min.js"></script>
+<script src="../static/js/banner.js"></script>
+<script src="../static/js/navbar.js"></script>
+<script src="../static/js/web.core.js"></script>
+<script src="../static/js/web.adtabs.js"></script>
+<script src="../static/js/web.subnav.js"></script>
+<script src="../static/js/web.ui.js"></script>
+<script src="../static/js/order.js"></script>
+</body>
+</html>
